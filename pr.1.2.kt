@@ -2,7 +2,7 @@
 В строке указано несколько неотрицательных целых чисел, разделенных пробелами (по одному пробелу между числами).
 Какие цифры отсутствуют ровно в двух числах?*/
 fun main() {
-    var digits = IntArray(10) { 0 }
+    val digits = IntArray(10) { 0 }
     var counter = 1
     println("Enter string")
     val enterString = readLine()

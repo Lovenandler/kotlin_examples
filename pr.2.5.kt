@@ -1,15 +1,20 @@
-@file:Suppress("DEPRECATED_IDENTITY_EQUALS")
 
-fun pair(numbers: String){
+
+fun pair(vararg numbers: String){
     val digits = IntArray(10) { 0 }
     var counter = 1
     for (i in numbers) {
-        if (i !== ' ') {
-            if (digits[i.code-48] != counter)  digits[i.toInt().toChar().code-48]++
-
-        } else {
-            counter++
+        for( char in i){
+            if (char.code != 32){
+                if (digits[char.code-48] != counter)
+                digits[char.code-48]++
+            }
+            else {
+                counter++
+            }
         }
+
+
     }
     for (digit in digits.indices) {
         if (counter - digits[digit] == 2) {
@@ -18,5 +23,5 @@ fun pair(numbers: String){
     }
 }
 fun main(){
-    pair("23 3 5")
+    pair("21 3 4 2")
 }
