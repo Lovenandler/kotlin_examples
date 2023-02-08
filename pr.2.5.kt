@@ -1,4 +1,4 @@
-
+//Вторая практическая 5 задание
 
 fun pair(vararg numbers: String){
     val digits = IntArray(10) { 0 }
